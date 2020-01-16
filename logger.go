@@ -47,7 +47,7 @@ func Network(msg string, args ...interface{}) {
 // SQL displays a SQL message to stdout.
 // The given message and arguments are used in a similar fashion to printf().
 func SQL(msg string, args ...interface{}) {
-	if os.Getenv("SQL_LOG") != "" {
+	if os.Getenv("SQL_LOG") == "" {
 		print("SQL", msg, magenta, args...)
 	}
 }
